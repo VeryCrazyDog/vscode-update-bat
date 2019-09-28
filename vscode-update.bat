@@ -82,6 +82,10 @@ if errorlevel 1 (
 rem Move to final location
 echo [INFO] Moving new version to destination
 move "%UNZIP_DIR_PATH%" "%VSCODE_PATH%"
+if errorlevel 1 (
+	echo [ERROR] Failed to move new version to destination
+	exit /b 1
+)
 
 rem Cleanup
 echo [DEBUG] Cleaning up
