@@ -10,7 +10,6 @@ rem Path configuration, ARCHIVE_PATH can be blank
 set VSCODE_PATH=C:\Programs\Visual Studio Code
 set VSCODE_TMP_PATH=C:\Programs\Visual Studio Code Backup
 set ARCHIVE_PATH=E:\Data\System\Software\Visual Studio Code
-
 set TMP_PATH=%TMP%\vscode_update_tmp
 
 rem Move VSCODE_PATH
