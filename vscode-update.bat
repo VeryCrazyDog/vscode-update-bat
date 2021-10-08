@@ -14,7 +14,7 @@ set ARCHIVE_PATH=E:\Data\System\Software\Visual Studio Code
 set TMP_PATH=%TMP%\vscode_update_tmp
 
 rem Move VSCODE_PATH
-echo Moving Visual Studio Code to temporary location...
+echo [INFO] Moving Visual Studio Code to temporary location...
 move "%VSCODE_PATH%" "%VSCODE_TMP_PATH%"
 if errorlevel 1 (
 	echo [ERROR] Failed to move Visual Studio Code
@@ -92,21 +92,21 @@ echo [DEBUG] Cleaning up
 rmdir /s /q "%VSCODE_TMP_PATH%"
 rmdir /s /q "%TMP_PATH%"
 if exist "%VSCODE_TMP_PATH%" (
-	echo Trying to remove "%VSCODE_TMP_PATH%" again...
+	echo [WARN] Trying to remove "%VSCODE_TMP_PATH%" again...
 	ping 127.0.0.1 -n 2 > nul
 	rmdir /s /q "%VSCODE_TMP_PATH%"
 )
 if exist "%VSCODE_TMP_PATH%" (
-	echo Trying to remove "%VSCODE_TMP_PATH%" again...
+	echo [WARN] Trying to remove "%VSCODE_TMP_PATH%" again...
 	ping 127.0.0.1 -n 2 > nul
 	rmdir /s /q "%VSCODE_TMP_PATH%"
 )
 if exist "%VSCODE_TMP_PATH%" (
-	echo Trying to remove "%VSCODE_TMP_PATH%" again...
+	echo [WARN] Trying to remove "%VSCODE_TMP_PATH%" again...
 	ping 127.0.0.1 -n 2 > nul
 	rmdir /s /q "%VSCODE_TMP_PATH%"
 )
-if exist "%VSCODE_TMP_PATH%" echo Failed to remove directory "%VSCODE_TMP_PATH%"
+if exist "%VSCODE_TMP_PATH%" echo [ERROR] Failed to remove directory "%VSCODE_TMP_PATH%"
 
 rem Complete
 echo [INFO] %~0 ended
